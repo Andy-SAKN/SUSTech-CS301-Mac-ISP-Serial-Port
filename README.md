@@ -16,11 +16,30 @@ sakn@SAKNdeMacBook-Pro ~ % ls /dev/cu.*
 /dev/cu.Bluetooth-Incoming-Port	/dev/cu.wchusbserial11330
 /dev/cu.usbserial-11330		/dev/cu.wlan-debug
 ### 串口通信工具
+#### 安装
 我使用的是免费的和官方衔接的最新版STM32CubeProgrammer（包太大就不放在库里了，官网安装需要的账号和安装STM IDE的是同一账号），官网安装链接如下：
 https://www.st.com/en/development-tools/stm32cubeprog.html
 解压后一路点默认到安装成功，如果安装时没注意路径无法找到它在哪里，可以
 按 Command + Space 打开 Spotlight 搜索，在搜索框中输入STM32CubeProgrammer进行寻找
 <img width="588" alt="image" src="https://github.com/user-attachments/assets/da126641-380e-4991-9c87-d4f3e1969cbb">
+#### 使用
+详细教程在csdn上有，链接如下：
+https://blog.csdn.net/weixin_62292999/article/details/140446389
+注意，实际测试中发现有一些和lab课件中的操作区别：
+1. 下图中均需设置为low，否则点击connect会无法连接
+<img width="245" alt="image" src="https://github.com/user-attachments/assets/f1938838-0ccf-426d-a631-37b57d439081">
+2.port选择里的名称有变化，类似下图
+<img width="1198" alt="image" src="https://github.com/user-attachments/assets/1dab0768-2dc2-4a4f-81e1-5a879199d938">
+3.准备写入时需要将BOOT0接入V3.3电位（如图），然后按复位键，点connect，start programming，弹出成功烧录窗口后断开连接（成功烧录后可能会在控制台连续报错并自动断开连接，不用管它，可能是因为烧录完成后不是串口通信模式了）。然后将BOOT0复原到GND，点击reset，程序正常运行。，
+<img width="525" alt="image" src="https://github.com/user-attachments/assets/cc3a19f2-8910-4d34-92c2-8f44b28948e6">
+![1c5ab89f40209edf9e81b8401005c2ce_720](https://github.com/user-attachments/assets/ee6b40d2-b7bb-4d6b-871f-000212c90e25)
+4.如果想要清除之前其他方式烧录的结果以此检验是否通过串口烧录成功，可以在成功连接后先按下图中的full chip erase按键将烧录结果清零，再进行重新烧录
+<img width="356" alt="image" src="https://github.com/user-attachments/assets/4b33d5cf-6b5d-4d8d-b526-dc68d12a6aaf">
+
+
+
+
+
 
 
 
