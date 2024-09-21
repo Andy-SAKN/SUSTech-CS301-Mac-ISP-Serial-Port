@@ -54,7 +54,7 @@ https://blog.csdn.net/weixin_62292999/article/details/140446389
 
 <img width="229" alt="image" src="https://github.com/user-attachments/assets/7ec21e93-55d6-4e65-b181-6a174b3a4aff">
 
-##### 4.如果想要清除之前其他方式烧录的结果以此检验是否通过串口烧录成功，可以在成功连接后先按下图中的full chip erase按键将烧录结果清零，再进行重新烧录
+##### 4.如果想要清除之前其他方式烧录的结果以此检验是否通过串口烧录成功，可以在成功连接后先按下图中的full chip erase按键将烧录结果清零，再进行重新烧录。
 <img width="356" alt="image" src="https://github.com/user-attachments/assets/4b33d5cf-6b5d-4d8d-b526-dc68d12a6aaf">
 
 
